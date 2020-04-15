@@ -49,7 +49,7 @@ public class ReceiveFileThread extends Thread {
                     if ((fileData = (FileDTO) ois.readObject()) != null) {
                         sleep(500);
                         fileList.add(fileData);
-                        txtMessage.append(fileData.fileName + "\n");
+                        txtMessage.append(fileData.getFileName() + "\n");
                     }
                 }
                 sleep(1000);

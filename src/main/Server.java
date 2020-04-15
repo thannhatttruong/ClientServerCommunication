@@ -160,9 +160,9 @@ public class Server extends javax.swing.JFrame implements Runnable {
         if (this.txtMessage.getText().length() > 2) {
             try {
                 for (int i = start; i < fileList.size(); i++) {
-                    File file = new File(txtFilePath.getText().trim() + "/" + fileList.get(i).fileName);
+                    File file = new File(txtFilePath.getText().trim() + "/" + fileList.get(i).getFileName());
                     fos = new FileOutputStream(file);
-                    fos.write(fileList.get(i).data, 0, fileList.get(i).length);
+                    fos.write(fileList.get(i).getData(), 0, fileList.get(i).getLength());
                     start++;
                 }
                 fos.close();
